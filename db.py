@@ -6,7 +6,7 @@ class Database:
         self.connection = None
         try:
             self.connection = pymysql.connect(
-                host='localhost',
+                host='mariadb',
                 # host='svc.sel5.cloudtype.app',
                 # port=31484,
                 database='test',  # test 데이터베이스 사용
@@ -65,4 +65,5 @@ class Database:
         """데이터베이스 연결 종료"""
         if self.connection:
             self.connection.close()
+
             print("MariaDB 연결이 종료되었습니다.")
