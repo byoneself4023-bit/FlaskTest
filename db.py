@@ -11,7 +11,7 @@ class Database:
                 # port=31484,
                 database='test',  # test 데이터베이스 사용
                 user='root',
-                password='',  # mariadb 설치 당시의 패스워드, 실제 환경에서는 보안을 위해 환경변수 등을 사용
+                password='0722',  # mariadb 설치 당시의 패스워드, 실제 환경에서는 보안을 위해 환경변수 등을 사용
                 charset='utf8mb4',
                 cursorclass=pymysql.cursors.DictCursor   # 쿼리 결과를 딕셔너리로 변환
             )
@@ -67,3 +67,4 @@ class Database:
             self.connection.close()
 
             print("MariaDB 연결이 종료되었습니다.")
+
